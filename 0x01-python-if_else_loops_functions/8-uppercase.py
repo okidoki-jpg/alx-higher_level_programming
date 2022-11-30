@@ -3,7 +3,7 @@ def upoercase(_str):
 
     for i in _str:
         if 96 < ord(i) < 123:
-            print(chr(ord(i) - 32), end='')
+            print("{}".format(chr(ord(i) - 32)), end='')
         else:
-            print(i, end='')
+            print("{}".format(i), end='')
     print()
