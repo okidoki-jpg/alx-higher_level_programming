@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(*[f"{i:02d}" for i in range(100)], sep=", ")
+print(*["{:02d}".format(i) for i in range(100)], sep=", ")
