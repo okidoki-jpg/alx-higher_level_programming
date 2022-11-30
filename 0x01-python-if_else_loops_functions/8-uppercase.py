@@ -1,4 +1,4 @@
-#!/usr/bin/python3                                                    
+#!/usr/bin/python3
 def uppercase(_str):
 
     for i in _str:
