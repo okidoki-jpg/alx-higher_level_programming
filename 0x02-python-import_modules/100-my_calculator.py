@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv, exit
-    
+
     ops = "+-*/"
     if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -13,10 +13,10 @@ if __name__ == "__main__":
     else:
         a, b, op = int(argv[1]), int(argv[3]), str(argv[2])
         if argv[2] == "+":
-            print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b))) 
+            print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b)))
         if argv[2] == "-":
-            print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b))) 
+            print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b)))
         if argv[2] == "*":
-            print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b))) 
+            print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
         if argv[2] == "/":
-            print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b))) 
+            print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b)))
