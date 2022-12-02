@@ -12,4 +12,3 @@ if __name__ == "__main__":
         print("{:d} {}:".format(idx-1, var))
         for idx in range(1, idx):
             print("{:d}: {}".format(idx, argv[idx]))
-
