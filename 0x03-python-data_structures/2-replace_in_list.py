@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    def replace_in_list(my_list, idx, element):
+def replace_in_list(my_list, idx, element):
 
-        if idx > -1 and idx < len(my_list):
-            my_list[idx] = element
-        return my_list
+    if idx > -1 and idx < len(my_list):
+        my_list[idx] = element
+    return my_list
