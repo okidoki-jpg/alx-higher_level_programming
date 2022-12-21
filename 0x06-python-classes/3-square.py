@@ -1,8 +1,19 @@
 #!/usr/bin/python3
 
 class Square:
+    """A clasd defining a square"""
 
     def __init__(self, size=0):
+        """Initialization of class properties
+    
+            Args:
+                size (:obj:`int`, optional): size of square. used to
+                init private size attr.
+
+            Raises:
+                TyoeError: if size variable is not int
+                ValueError: if size variable is less than 0
+        """
 
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -12,5 +23,9 @@ class Square:
         self.__size = size
 
     def area(self):
+        """
+        Returns:
+            int: area of the square
+        """
 
         return (self.__size * self.__size)
