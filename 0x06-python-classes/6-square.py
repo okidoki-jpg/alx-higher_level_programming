@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""Creating a square class"""
+
 
 class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialization of class properties
-    
+
             Args:
                 size (:obj:`int`, optional): size of square. used to
                 init private size attr.
@@ -54,7 +56,7 @@ class Square:
     @property
     def position(self):
         """Retrieves instance position
-        
+
             Returns:
                 tuple: position of the square
         """
@@ -69,9 +71,9 @@ class Square:
                 TypeError: If data is incompatible
         """
 
-        if not isinstance(value, tuple) or\
-         not all(isinstance(idx, int) for idx in value) or\
-         not all(idx >= 0 for idx in value) or len(value) != 2:
+        if not isinstance(value, tuple) or
+        not all(isinstance(idx, int) for idx in value) or
+        not all(idx >= 0 for idx in value) or len(value) != 2:
             raise TypeError("position must be a tuple of two integers")
 
         self.__position = value

@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """Creating a square class"""
 
+
 class Square:
     """A clasd defining a square"""
 
     def __init__(self, size=0):
         """Initialization of class properties
-    
+
             Args:
                 size (:obj:`int`, optional): size of square. used to
                 init private size attr.
