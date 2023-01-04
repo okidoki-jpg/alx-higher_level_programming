@@ -1,0 +1,53 @@
+
+Numbers
+=======
+
+``add_integer(a, b)`` returns the int sum of its arguments.
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> for i in [2, 2.3, -2]:
+    ...         type(add_integer(i, 3))
+    <class 'int'>
+    <class 'int'>
+    <class 'int'>
+
+
+Non-Numbers
+===========
+
+response of function to complex/non-number
+
+::
+
+    >>> add_integer('a', 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> add_integer(2j, 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> add_integer([1, 'two'], 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> add_integer((3, 'four'), 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> add_integer({5, 'five'}, 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> add_integer({"seven" : 8}, 3)  #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+

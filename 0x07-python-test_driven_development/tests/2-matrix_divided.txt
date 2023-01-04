@@ -1,0 +1,80 @@
+Numbers
+=======
+
+``matrix_divided(matrix, div)`` return matrix with all elements divided by 'div'
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+    >>> matrix = [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> matrix_divided(matrix, 2.0)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+
+ZeroDivision
+============
+
+::
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+      ...
+    ZeroDivisionError: division by zero
+
+Uneven Matrix
+=============
+
+::
+
+    >>> matrix = [[1, 2, 3], [4, 5]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: Each row of the matrix must have the same size
+
+
+Non-Numbers
+===========
+
+::
+
+    >>> matrix = [[1, 2, 3], [4, 5, '6']]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> matrix = [[1, 2, 3], [4, 5, [6]]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> matrix = [[1, 2, 3], [4, 5, (6,)]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> matrix = [[1, 2, 3], [4, 5, {6}]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> matrix = [[1, 2, 3], [4, 5, {'6' : 6}]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6j]]
+    >>> matrix_divided(matrix, 2)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...

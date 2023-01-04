@@ -1,0 +1,42 @@
+
+String
+======
+
+``text_indentation(text)`` Prints a text with 2 new lines after each of these characters: ., ? and :
+
+::
+
+    >>> text_indent = __import__('5-text_indentation').text_indentation
+    >>> text_indent("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+    ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+    ... Non autem hoc: igitur ne illud quidem""")  #doctest: +NORMALIZE_WHITESPACE
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere? 
+    <BLANKLINE>
+    Non autem hoc:
+    <BLANKLINE>
+    igitur ne illud quidem
+
+Non-String
+==========
+
+::
+
+    >>> text_indent()  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> text_indent(["some", "text", "."])  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
+    >>> text_indent(0)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+
