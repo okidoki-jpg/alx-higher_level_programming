@@ -87,9 +87,9 @@ class Rectangle:
         Returns the perimeter of the rectangle
         """
 
-        if any([self.__width, self.__height]) == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+        if all([self.__width, self.__height]):
+            return 2 * (self.__width + self.__height)
+        return 0
 
     def __str__(self):
 
@@ -97,7 +97,9 @@ class Rectangle:
         Returns a string representation of the rectangle using the character #.
         """
 
-        return '\n'.join([str(self.print_symbol) * self.width] * self.height)
+        if all([self.width, self.height]):
+            return '\n'.join([str(self.print_symbol) * self.width] * self.height)
+        return ""
 
     def __repr__(self):
 
