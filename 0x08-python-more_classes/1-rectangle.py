@@ -19,8 +19,8 @@ class Rectangle:
         Initialize class attributes.
         """
 
-        self._Rectangle__height = height
-        self._Rectangle__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -29,7 +29,7 @@ class Rectangle:
         int: The width of the rectangle.
         """
 
-        return self._Rectangle__width
+        return self.__width
 
     @width.setter
     def width(self, val):
@@ -42,7 +42,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if val < 0:
             raise ValueError("width must be >= 0")
-        self._Rectangle__width = val
+        self.__width = val
 
     @property
     def height(self):
@@ -51,7 +51,7 @@ class Rectangle:
         int: The height of the rectangle.
         """
 
-        return self._Rectangle__height
+        return self.__height
 
     @height.setter
     def height(self, val):
@@ -64,4 +64,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if val < 0:
             raise ValueError("height must be >= 0")
-        self._Rectangle__height = val
+        self.__height = val
