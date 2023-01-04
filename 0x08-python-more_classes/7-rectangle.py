@@ -98,7 +98,7 @@ class Rectangle:
         """
 
         if all([self.width, self.height]):
-            return '\n'.join([str(self.print_symbol) * self.width] * self.height)
+            return '\n'.join([str(self.print_symbol)*self.width] * self.height)
         return ""
 
     def __repr__(self):
