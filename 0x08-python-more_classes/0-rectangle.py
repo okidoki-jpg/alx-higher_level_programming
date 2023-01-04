@@ -6,4 +6,8 @@ A class defining a rectangle
 
 
 class Rectangle:
+    """
+    an empty rectangle class
+    """
+
     pass
