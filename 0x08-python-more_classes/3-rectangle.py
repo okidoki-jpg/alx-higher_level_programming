@@ -19,8 +19,8 @@ class Rectangle:
         Initialize class attributes.
         """
 
-        self._Rectangle__height = height
-        self._Rectangle__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -29,7 +29,7 @@ class Rectangle:
         int: The width of the rectangle.
         """
 
-        return self._Rectangle__width
+        return self.__width
 
     @width.setter
     def width(self, val):
@@ -42,7 +42,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if val < 0:
             raise ValueError("width must be >= 0")
-        self._Rectangle__width = val
+        self.__width = val
 
     @property
     def height(self):
@@ -51,7 +51,7 @@ class Rectangle:
         int: The height of the rectangle.
         """
 
-        return self._Rectangle__height
+        return self.__height
 
     @height.setter
     def height(self, val):
@@ -64,7 +64,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if val < 0:
             raise ValueError("height must be >= 0")
-        self._Rectangle__height = val
+        self.__height = val
 
     def area(self):
 
@@ -72,7 +72,7 @@ class Rectangle:
         Returns the area of the rectangle
         """
 
-        return self._Rectangle__width * self._Rectangle__height
+        return self.__width * self.__height
 
     def perimeter(self):
 
@@ -80,9 +80,9 @@ class Rectangle:
         Returns the perimeter of the rectangle
         """
 
-        if any([self._Rectangle__width, self._Rectangle__height]) == 0:
+        if any([self.__width, self.__height]) == 0:
             return 0
-        return 2 * (self._Rectangle__width + self._Rectangle__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
 
