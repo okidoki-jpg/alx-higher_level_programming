@@ -17,17 +17,17 @@ def matrix_divided(matrix, div):
     """
     check that all elements are lists
     """
-    if not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists)\
-                        of integers/floats")
+    if not all(isinstance(row, list) for row in matrix) or matrix == []:
+        raise TypeError("matrix must be a matrix (list of lists)"
+                        " of integers/floats")
 
     """
     validate that matrix elments are type floatr/int
     """
-    if not all(isinstance(elem, (int, float)) for row in matrix
+    if not all((type(elem) in (int, float)) for row in matrix
                for elem in row):
-        raise TypeError("matrix must be a matrix (list of lists)\
-                        of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists)"
+                        " of integers/floats")
 
     """
     validate that matrix rows are the same length

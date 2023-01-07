@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+""" Doc """
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(None,2))
-print(add_integer(100.3, -2))
+matrix_divided = __import__('2-matrix_divided').matrix_divided
+
 try:
-    print(add_integer(4, "School"))
+    matrix = [[3, "9"], [12, 3]]
+    print(matrix_divided(matrix, 2))
+    print(matrix)
 except Exception as e:
     print(e)
+
 try:
-    print(add_integer(None))
+    matrix = [[3, 9], [12, 3]]
+    print(matrix_divided(matrix, "2"))
+    print(matrix)
 except Exception as e:
     print(e)
