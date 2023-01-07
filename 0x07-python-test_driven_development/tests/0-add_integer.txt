@@ -7,8 +7,9 @@ Numbers
 ::
 
     >>> add_integer = __import__('0-add_integer').add_integer
-    >>> for i in [2, 2.3, -2]:
+    >>> for i in [2, 2.3, -2, -2.3]:
     ...         type(add_integer(i, 3))
+    <class 'int'>
     <class 'int'>
     <class 'int'>
     <class 'int'>
