@@ -1,12 +1,11 @@
 #!/usr/bin/python
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
 """
 Class Module Doc:  Rectangle
 
 Attributes:
     BaseGeometry (class object): base class
 """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
