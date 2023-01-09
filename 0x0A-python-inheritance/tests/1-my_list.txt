@@ -27,5 +27,17 @@ Lists
     >>> data
     [6, 3, 7, -4, 8]
 
+    >>> data.print_sorted()
+    [-4, 3, 6, 7, 8]
+
     >>> issubclass(MyList, list)
     True
+
+Err-
+====
+
+    >>> data.print_sorted([6, 3, 7, -4, 8])  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: ...
+     
