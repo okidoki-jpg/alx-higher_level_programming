@@ -1,0 +1,31 @@
+Lists
+=====
+``MyList(list)`` derived class inheriting list object
+
+::
+
+    >>> MyList = __import__("1-my_list").MyList
+    >>> data = MyList()
+    >>> data
+    []
+
+    >>> data.extend([6, 3, -2, 7])
+    >>> data
+    [6, 3, -2, 7]
+
+    >>> data.append(8)
+    >>> data
+    [6, 3, -2, 7, 8]
+
+    >>> data.pop(2)
+    -2
+
+    >>> data
+    [6, 3, 7, 8]
+
+    >>> data.insert(3, -4)
+    >>> data
+    [6, 3, 7, -4, 8]
+
+    >>> issubclass(MyList, list)
+    True
