@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-import sys
-save = __import__("5-save_to_json_file").save_to_json_file
-load = __import__("6-load_from_json_file").load_from_json_file
-
 """
 Module Doc: add items from sys args to list and write it to json file
 
 Attributes:
     args (any object): sys args
 """
+
+
+import sys
+save = __import__("5-save_to_json_file").save_to_json_file
+load = __import__("6-load_from_json_file").load_from_json_file
 
 
 def add_item(args):

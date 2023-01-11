@@ -32,10 +32,10 @@ class Student:
         else:
             return {k: v for k, v in self.__dict__.items() if k in attrs}
 
-    def reload_from_json(self, json)
+    def reload_from_json(self, json):
     """
     clears/resets a student instance
     """
 
-    for key, value in json.items():
-        setattr(self, key, value)
+        for key, value in json.items():
+            setattr(self, key, value)

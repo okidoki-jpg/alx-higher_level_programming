@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import json
-
 """
 Module Doc: Return JSON representation of object
 
@@ -10,6 +8,9 @@ Attributes:
 Return:
     JSON representation of object
 """
+
+
+import json
 
 
 def to_json_string(my_obj):
