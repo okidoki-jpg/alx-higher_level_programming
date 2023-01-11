@@ -21,7 +21,7 @@ def add_item(args):
     load/create new list
     """
     try:
-        my_list = load("add_items.json")
+        my_list = load("add_item.json")
     except FileNotFoundError:
         my_list = []
 
@@ -34,7 +34,7 @@ def add_item(args):
     """
     save new list
     """
-    save(my_list, "add_items.json")
+    save(my_list, "add_item.json")
 
 if __name__ == "__main__":
     add_item(sys.argv[1:])
