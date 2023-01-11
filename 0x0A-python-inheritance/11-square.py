@@ -1,12 +1,11 @@
 #!/usr/bin/pythin3
-Rectangle = __import__('9-rectangle').Rectangle
-
 """
 Class Module Doc: Square
 
 Attributes:
     Rectangle (class): base class
 """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
