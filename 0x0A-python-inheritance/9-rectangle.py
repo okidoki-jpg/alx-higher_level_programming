@@ -5,6 +5,8 @@ Class Module Doc:  Rectangle
 Attributes:
     BaseGeometry (class object): base class
 """
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -50,3 +52,8 @@ class Rectangle(BaseGeometry):
         """
 
         return self.__width * self.__height
+
+r = Rectangle(3, 5)
+
+print(r)
+print(r.area())
