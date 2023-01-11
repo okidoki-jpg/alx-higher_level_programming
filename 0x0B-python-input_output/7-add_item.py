@@ -36,5 +36,5 @@ def add_item(args):
     """
     save(my_list, "add_items.json")
 
-
-add_item(sys.argv[1:])
+if __name__ == "__main__":
+    add_item(sys.argv[1:])
