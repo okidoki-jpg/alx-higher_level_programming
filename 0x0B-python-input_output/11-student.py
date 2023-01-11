@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
 """
 Class Module Doc:
 
 Methods:
     to_json - gets obj dictionary representation
+    reload_from_json - reset all instance attributes
 """
 
 
@@ -33,7 +33,7 @@ class Student:
             return {k: v for k, v in self.__dict__.items() if k in attrs}
 
     def reload_from_json(self, json):
-    """
+        """
     clears/resets a student instance
     """
 
