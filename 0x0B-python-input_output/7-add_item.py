@@ -22,7 +22,7 @@ def add_item(args):
     """
     try:
         my_list = load("add_items.json")
-    except Exception as e:
+    except FileNotFoundError:
         my_list = []
 
     """
