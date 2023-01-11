@@ -38,7 +38,7 @@ class Square(Rectangle):
             formated string
         """
 
-        return f"[Square] {self.__sizr} / {self.__size}"
+        return f"[Square] {self.__size} / {self.__size}"
 
     def area(self):
         """
