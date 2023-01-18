@@ -54,8 +54,7 @@ class Base:
         Attributes:
             list_objs (list): A list of Base derived objects
         """
-
-        if list_objs:
+        if list_objs is not None:
             dicts = []
             [dicts.append(i.to_dictionary()) for i in list_objs]
 
