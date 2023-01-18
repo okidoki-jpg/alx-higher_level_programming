@@ -54,12 +54,12 @@ class Base:
         Attributes:
             list_objs (list): A list of Base derived objects
         """
-        if list_objs is not None:
-            dicts = []
-            [dicts.append(i.to_dictionary()) for i in list_objs]
 
-            with open(f"{cls.__name__}.json", "w", encoding="utf-8") as f:
-                f.write(cls.to_json_string(dicts))
+        dicts = []
+        with open(f"{cls.__name__}.json", "w", encoding="utf-8") as f:
+            if list_objs is not None:
+                [dicts.append(i.to_dictionary()) for i in list_objs]
+        f.write(cls.to_json_string(dicts))
 
     @staticmethod
     def from_json_string(json_string):
