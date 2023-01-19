@@ -87,7 +87,6 @@ class Base:
             An instance with all attributes already set
         """
 
-        new = cls(10, 8)
         if cls.__name__ == 'Rectangle':
             new = cls(1, 1)
         elif cls.__name__ == 'Square':
