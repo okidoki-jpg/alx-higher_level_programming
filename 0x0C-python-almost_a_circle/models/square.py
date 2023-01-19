@@ -3,7 +3,7 @@
 Class Module Doc: Define a Square class
 """
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -51,8 +51,8 @@ class Square(Rectangle):
         update object attributes using args/kwargs
         """
 
-        attrs = list(self.__init__.__code__.co_varnames)[1:]
-        attrs.insert(0, attrs.pop())
+        attrs = list(Square.__init__.__code__.co_varnames)[1:]
+        attrs.insert(0, pop())
 
         if args:
             for k, v in zip(attrs, args):

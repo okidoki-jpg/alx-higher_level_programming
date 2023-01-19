@@ -6,7 +6,7 @@ Attributes:
     Base (class): base class
 """
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -188,9 +188,8 @@ class Rectangle(Base):
         """
 
         if args:
-            attrs = list(self.__dict__)
+            attrs = list(self.__dict__.keys())[:len(args)]
             for k, v in zip(attrs, args):
-                print(k, ":", v)
                 setattr(self, k, v)
         elif kwargs:
             for k, v in kwargs.items():
