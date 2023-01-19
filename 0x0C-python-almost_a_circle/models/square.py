@@ -52,7 +52,7 @@ class Square(Rectangle):
         """
 
         attrs = list(Square.__init__.__code__.co_varnames)[1:]
-        attrs.insert(0, pop())
+        attrs.insert(0, attrs.pop())
 
         if args:
             for k, v in zip(attrs, args):
