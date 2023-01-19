@@ -25,11 +25,11 @@ class Base:
             id (int): init id value
         """
 
-        self.id = id
-
-        if not id:
+        if id:
+            self.id = id
+        else:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -87,9 +87,11 @@ class Base:
             An instance with all attributes already set
         """
 
-        new = cls(10, 8)
-        if new:
-            new.update(**dictionary)
+        if cls.__name__ == 'Rectangle':
+            new = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            new = cls(1)
+        new.update(**dictionary)
         return new
 
     @classmethod
