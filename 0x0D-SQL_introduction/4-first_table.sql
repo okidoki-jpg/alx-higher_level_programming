@@ -2,6 +2,6 @@
 -- (id and name) in the passed in database.
 
 CREATE TABLE
-IF NOT EXISTS first_table (
-  id INT,
-  name VARCHAR(256));
+IF NOT EXISTS `first_table` (
+  `id` INT,
+  `name` VARCHAR(256));
