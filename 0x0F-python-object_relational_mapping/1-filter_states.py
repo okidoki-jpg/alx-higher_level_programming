@@ -22,5 +22,5 @@ if __name__ == "__main__":
     c = conn.cursor()
 
     """ execute, read and display query: names that start with N"""
-    c.execute("SELECT id, name FROM states WHERE name LIKE 'N%'")
+    c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
     print(*c.fetchall(), sep='\n')

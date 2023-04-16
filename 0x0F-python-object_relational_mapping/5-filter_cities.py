@@ -23,7 +23,7 @@ if __name__ == "__main__":
     c = conn.cursor()
 
     """ execute, read and display query: cities in a given state """
-    c.execute("SELECT cities.name FROM cities\
-             JOIN states ON cities.state_id = states.id\
-              WHERE states.name LIKE %s", (search,))
+    c.execute("SELECT `cities.name` FROM `cities`\
+             JOIN states ON `cities.state_id` = `states.id`\
+              WHERE `states.name` LIKE %s", (search,))
     print(*[i[0] for i in c.fetchall()], sep=", ")
