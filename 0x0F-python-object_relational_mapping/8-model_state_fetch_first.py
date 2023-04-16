@@ -12,7 +12,7 @@ from model_state import State
 if __name__ == "__main__":
 
     args = sys.argv
-    db = f"mysql+mysqldb://{args[1]}:{args[2]}@localhost/{args[3]}"
+    db = f"mysql+mysqldb://{args[1]}:{args[2]}@localhost:3306/{args[3]}"
 
     engine = create_engine(db, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
@@ -23,3 +23,5 @@ if __name__ == "__main__":
         print("Nothing")
     else:
         print(f"{state.id}: {state.name}")
+
+    session.close()
