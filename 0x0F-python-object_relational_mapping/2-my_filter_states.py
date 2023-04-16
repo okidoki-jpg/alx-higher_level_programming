@@ -23,7 +23,7 @@ if __name__ == "__main__":
     c = conn.cursor()
 
     """ execute, read and display query: names matching search arg"""
-    c.execute("SELECT * FROM states WHERE name = %s", (search,))
+    c.execute("SELECT * FROM states WHERE name = {}".format(search))
     [print(i) for i in c.fetchall()]
     c.close()
     conn.close()
