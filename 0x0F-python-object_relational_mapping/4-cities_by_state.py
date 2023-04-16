@@ -22,8 +22,10 @@ if __name__ == "__main__":
     c = conn.cursor()
 
     """ execute, read and display query: cities & their states """
-    c.execute("SELECT `cities.id`, `cities.name`, \
-			`states.name` FROM `cities` INNER JOIN `states` ON \
-			`cities.state_id` = `states.id` \
-			ORDER BY `cities.id` ASC")
-    print(*c.fetchall(), sep='\n')
+    c.execute("SELECT cities.id, cities.name, \
+            states.name FROM cities INNER JOIN states ON \
+            cities.state_id = states.id \
+            ORDER BY cities.id ASC")
+    [print(i) for i in c.fetchall()]
+    c.close()
+    conn.close()

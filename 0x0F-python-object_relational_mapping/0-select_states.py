@@ -22,7 +22,7 @@ if __name__ == "__main__":
     c = conn.cursor()
 
     """ execute read and display query """
-    c.execute("SELECT * FROM `states` ORDER BY id ASC")
+    c.execute("SELECT * FROM states ORDER BY id ASC")
     [print(i) for i in c.fetchall()]
     c.close()
     conn.close()
