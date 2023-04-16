@@ -5,14 +5,14 @@ A script connecting to an SQL database
 """
 
 import sys
-from MySQLdb import connect
+from MySQLdb
 
 if __name__ == "__main__":
 
     args = sys.argv
 
     """ connect to database """
-    conn = connect(host="localhost",
+    conn = MySQLdb.connect(host="localhost",
                    user=args[1],
                    password=args[2],
                    database=args[3],
