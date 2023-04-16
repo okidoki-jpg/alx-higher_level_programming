@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
     """ execute read and display query """
     c.execute("SELECT * FROM `states` ORDER BY id ASC")
-    print(*c.fetchall(), sep='\n')
+    print([i for i in c.fetchall()])
     c.close()
     conn.close()
