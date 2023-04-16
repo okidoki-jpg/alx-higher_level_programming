@@ -13,10 +13,10 @@ if __name__ == "__main__":
 
     """ connect to database """
     conn = MySQLdb.connect(host="localhost",
-                   user=args[1],
-                   password=args[2],
-                   database=args[3],
-                   port=3306)
+                           user=args[1],
+                           password=args[2],
+                           database=args[3],
+                           port=3306)
 
     """ create cursor """
     c = conn.cursor()
